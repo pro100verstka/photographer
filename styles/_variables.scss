@@ -1,0 +1,25 @@
+@use 'helpers' as *;
+
+:root {
+	--color-dark: #000000;
+	--color-dark-alternate: rgba(0, 0, 0, 0.7);
+	--color-light: #ffffff;
+	--color-light-alternate: rgba(255, 255, 255, 0.8);
+	--color-accent: #f86624;
+
+	--border-radius: #{rem(36)};
+	--border: #{rem(1)} solid rgba(0, 0, 0, 0.1);
+
+	--input-height: 5#{rem(56)};
+
+	--font-family-base: "Stem", sans-serif;
+	--font-family-accent: "Gilroy", sans-serif;
+
+	--container-width: #{rem(1110)};
+	--container-padding-x: #{rem(15)};
+
+	--transition-duration: 0.2s;
+
+	--header-height: clamp(#{rem(60)}, 5.5vw, #{rem(80)});
+	--section-padding-y: clamp(#{rem(70)}, 8.33vw, #{rem(120)});
+}

@@ -1,0 +1,84 @@
+@use '../helpers' as *;
+
+.header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 10;
+	width: 100%;
+	background-color: var(--color-light);
+
+	&__inner {
+		display: flex;
+		min-height: var(--header-height);
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	&__menu {
+		flex: 1 1 auto;
+		margin-right: rem(40);
+
+		@include mobile {
+			order: 1;
+			flex: 0;
+			margin-right: 0;
+		}
+	}
+
+	&__phone {
+		position: relative;
+		z-index: 5;
+		display: flex;
+		flex-direction: column;
+		align-items: flex-end;
+		margin-right: rem(32);
+		font-size: rem(13);
+		color: var(--color-dark-alternate);
+
+		@include mobile {
+			font-size: rem(10);
+			margin-right: 0;
+		}
+		@include mobile-s {
+			display: none;
+		}
+	}
+	&__phone-link {
+		font-size: rem(18);
+		font-weight: 500;
+		color: var(--color-dark);
+		text-decoration: none;
+
+		@include tablet {
+			font-size: rem(15);
+		}
+
+		@include hover {
+			color: var(--color-dark-alternate);
+		}
+	}
+
+	&__order-button {
+		position: relative;
+		z-index: 5;
+		min-height: rem(44);
+		padding-inline: rem(24);
+		font-size: rem(15);
+		font-weight: 500;
+		color: var(--color-dark);
+		background-color: transparent;
+		border: var(--border);
+		border-radius: rem(6);
+
+		@include tablet {
+			min-height: rem(35);
+			padding-inline: rem(16);
+		}
+
+		@include hover {
+			background-color: var(--color-dark-alternate);
+			color: var(--color-light);
+		}
+	}
+}

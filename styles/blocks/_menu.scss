@@ -1,0 +1,64 @@
+@use '../helpers' as *;
+
+.menu {
+
+		// .menu__body
+
+		&__body {
+			@include mobile {
+				position: fixed;
+				top: 0;
+				left: -100%;
+				width: 100%;
+				height: 100%;
+				overflow: auto;
+				background-color: var(--color-light);
+				padding: rem(90) rem(15) rem(30) rem(15);
+				transition-duration: var(--transition-duration);
+
+				&::before {
+					content: "";
+					position: fixed;
+					top: 0;
+					right: 0;
+					width: 100%;
+					min-height: var(--header-height);
+					background-color: var(--color-light);
+				}
+
+				&.is-active {
+					left: 0;
+				}
+			}
+		}
+
+		// .menu__list
+
+		&__list {
+			display: flex;
+			justify-content: flex-end;
+			align-items: center;
+			column-gap: rem(24);
+
+			@include mobile {
+				flex-direction: column;
+				align-items: center;
+				font-size: rem(40);
+				row-gap: rem(40);
+				margin-bottom: rem(40);
+			}
+		}
+
+		// .menu__link
+
+		&__link {
+			color: var(--color-dark-alternate);
+			text-decoration: none;
+			font-weight: 500;
+
+			@include hover {
+				color: var(--color-dark);
+			}
+		}
+}
+
