@@ -13,4 +13,13 @@
 	border-radius: var(--border-radius);
 	transition-duration: var(--transition-duration);
 	border: none;
+
+	@include hover {
+		background-color: var(--color-dark-alternate);
+	}
+
+	&--white {
+		background-color: var(--color-light);
+		color: var(--color-accent);
+	}
 }

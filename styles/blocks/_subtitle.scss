@@ -1,0 +1,8 @@
+@use '../helpers' as *;
+
+.subtitle {
+	@include fluid-text (28, 24);
+	
+	font-weight: 500;
+	color: #ea3546;
+}

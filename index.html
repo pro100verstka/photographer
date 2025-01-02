@@ -1,48 +1,167 @@
 <!DOCTYPE html>
 <html lang="ru">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Фотограф</title>
-	<link rel="stylesheet" href="styles/main.css">
-</head>
-<body>
-	<header class="header">
-		<div class="header__inner container">
-			<a href="/" class="header__logo logo">Фотограф</a>
-			<div class="header__menu menu">
-				<button 
-					type="button" 
-					class="menu__icon icon-menu visible-mobile"
-					aria-label="Open menu"
-					title="Open menu"
-					data-js-header-burger-button
-					>
-					<span class="icon-menu__line"></span>
-          <span class="icon-menu__line"></span>
-          <span class="icon-menu__line"></span>
-				</button>
-				<nav class="menu__body" data-js-menu-body>
-					<ul class="menu__list" data-js-menu-list>
-						<li class="menu__item"><a href="/" class="menu__link">Отзывы</a></li>
-						<li class="menu__item"><a href="/" class="menu__link">Контакты</a></li>
-					</ul>
-				</nav>
-			</div>
-			<div class="header__phone" data-js-header-phone>
-            Запишитесь на съемку
-            <a class="header__phone-link" href="tel:+74951234567"
-              >+7 495 123-45-67</a
-            >
-          </div>
-          <button class="header__order-button button" type="button">
-            Заказать звонок
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Фотограф</title>
+    <link rel="stylesheet" href="styles/main.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__inner container container--header">
+        <a href="/" class="header__logo logo">Фотограф</a>
+        <div class="header__menu menu">
+          <button
+            type="button"
+            class="menu__icon icon-menu visible-mobile"
+            aria-label="Open menu"
+            title="Open menu"
+            data-js-header-burger-button
+          >
+            <span class="icon-menu__line"></span>
+            <span class="icon-menu__line"></span>
+            <span class="icon-menu__line"></span>
           </button>
-		</div>
-	</header>
-	<main>
-	</main>
-	<footer class="footer">Footer</footer>
-	<script src="./js/main.js" ></script>
-</body>
+          <nav class="menu__body" data-js-menu-body>
+            <ul class="menu__list" data-js-menu-list>
+              <li class="menu__item">
+                <a href="/" class="menu__link">Отзывы</a>
+              </li>
+              <li class="menu__item">
+                <a href="/" class="menu__link">Контакты</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <div class="header__phone" data-js-header-phone>
+          Запишитесь на съемку
+          <a class="header__phone-link" href="tel:+74951234567"
+            >+7 495 123-45-67</a
+          >
+        </div>
+        <button class="header__order-button button" type="button">
+          Заказать звонок
+        </button>
+      </div>
+    </header>
+    <main>
+      <section class="hero">
+        <div class="hero__inner container">
+          <div class="hero__content">
+            <h1 class="hero__title title title--white">
+              Фотограф в <br />
+              вашем городе
+            </h1>
+            <div class="hero__descr">
+              <p>
+                Фотографии, которые помогают вашему бизнесу. Обратитесь ко мне
+                прямо сейчас
+              </p>
+            </div>
+            <div class="hero__actions">
+              <a href="#about" class="hero__link button">О фотографе</a>
+              <a href="#price" class="hero__link button button--white"
+                >Стоимость услуг</a
+              >
+            </div>
+          </div>
+        </div>
+        <div class="hero__next-section">
+          <a
+            href="#portfolio"
+            class="hero__next-section-link"
+            aria-label="Next block"
+            title="Next block"
+          >
+            <svg
+              width="42"
+              height="19"
+              viewBox="0 0 42 19"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M21.0006 15.0791L3.10897 0.765764C2.46208 0.24825 1.51814 0.353131 1.00063 1.00002C0.483113 1.64692 0.587995 2.59086 1.23489 3.10837L21.0006 18.921L40.7664 3.10837C41.4133 2.59086 41.5181 1.64692 41.0006 1.00002C40.4831 0.353131 39.5392 0.248249 38.8923 0.765764L21.0006 15.0791Z"
+                fill="white"
+              />
+            </svg>
+          </a>
+        </div>
+      </section>
+			<section class="portfolio" id="portfolio">
+          <div class="portfolio__inner container">
+            <div class="portfolio__header section-header">
+              <div class="portfolio__subtitle subtitle">Виды съемок</div>
+              <h2 class="portfolio__title title">Закажите подходящую</h2>
+              <div class="portfolio__descr descr">
+                <p>
+                  Посмотрите примеры фотографий и обратитесь ко мне за тем видом
+                  съемки, который вам необходим
+                </p>
+              </div>
+            </div>
+            <ul class="portfolio__list">
+              <li class="portfolio__item">
+                <article
+                  class="portfolio__card card-portfolio card-portfolio--1"
+                >
+                  <h3 class="card-portfolio__title">Свадбеная фотосессия</h3>
+                  <div class="card-portfolio__price">от 3000 ₽</div>
+                  <a href="/" class="card-portfolio__link"></a>
+                </article>
+              </li>
+              <li class="portfolio__item">
+                <article
+                  class="portfolio__card card-portfolio card-portfolio--2"
+                >
+                  <h3 class="card-portfolio__title">Фотографии беременных</h3>
+                  <div class="card-portfolio__price">от 3000 ₽</div>
+                  <a href="/" class="card-portfolio__link"></a>
+                </article>
+              </li>
+              <li class="portfolio__item">
+                <article
+                  class="portfolio__card card-portfolio card-portfolio--3"
+                >
+                  <h3 class="card-portfolio__title">Детская фотосъемка</h3>
+                  <div class="card-portfolio__price">от 3000 ₽</div>
+                  <a href="/" class="card-portfolio__link"></a>
+                </article>
+              </li>
+              <li class="portfolio__item">
+                <article
+                  class="portfolio__card card-portfolio card-portfolio--4"
+                >
+                  <h3 class="card-portfolio__title">Семейная фотосессия</h3>
+                  <div class="card-portfolio__price">от 3000 ₽</div>
+                  <a href="/" class="card-portfolio__link"></a>
+                </article>
+              </li>
+              <li class="portfolio__item">
+                <article
+                  class="portfolio__card card-portfolio card-portfolio--5"
+                >
+                  <h3 class="card-portfolio__title">Фотографии еды</h3>
+                  <div class="card-portfolio__price">от 3000 ₽</div>
+                  <a href="/" class="card-portfolio__link"></a>
+                </article>
+              </li>
+              <li class="portfolio__item">
+                <article
+                  class="portfolio__card card-portfolio card-portfolio--6"
+                >
+                  <h3 class="card-portfolio__title">Эстрадная фотосъемка</h3>
+                  <div class="card-portfolio__price">от 3000 ₽</div>
+                  <a href="/" class="card-portfolio__link"></a>
+                </article>
+              </li>
+            </ul>
+          </div>
+        </section>
+    </main>
+    <footer class="footer">Footer</footer>
+    <script src="./js/main.js"></script>
+  </body>
 </html>

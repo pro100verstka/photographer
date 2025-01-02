@@ -76,8 +76,7 @@
 			padding-inline: rem(16);
 		}
 
-		@include hover {
-			background-color: var(--color-dark-alternate);
+		@include hover {	
 			color: var(--color-light);
 		}
 	}

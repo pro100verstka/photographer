@@ -1,0 +1,11 @@
+@use '../helpers' as *;
+
+.section-header {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	row-gap: fluid(24, 10);
+	margin-inline: auto;
+	margin-bottom: fluid(64, 40);
+	text-align: center;
+}

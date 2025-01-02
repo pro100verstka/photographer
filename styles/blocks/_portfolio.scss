@@ -1,0 +1,47 @@
+@use '../helpers' as *;
+
+.portfolio {
+	padding-block: var(--section-padding-y);
+
+	&__header {
+		max-width: rem(720);
+	}
+
+	&__list {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: rem(30);
+		transition-duration: var(--transition-duration);
+
+		@include hover {
+			& .portfolio__item {
+				filter: grayscale(90%);
+				opacity: 0.5;
+			}
+		}
+
+		& .portfolio__item:hover {
+			filter: grayscale(0);
+			opacity: 1;
+		}
+
+		@include tablet {
+			grid-template-columns: repeat(2, 1fr);
+		}
+
+		@include mobile {
+			gap: rem(15);
+		}
+		@include mobile-s {
+			grid-template-columns: repeat(1, 1fr);
+		}
+	}
+	&__item {
+		transition-duration: var(--transition-duration);
+
+		
+	}
+	&__card {
+		position: relative;
+	}
+}

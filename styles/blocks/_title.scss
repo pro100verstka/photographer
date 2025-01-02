@@ -1,0 +1,12 @@
+@use '../helpers' as *;
+
+.title {
+	font-size: clamp(40px, 4.44vw, 64px);
+	font-weight: 700;
+	line-height: 1.06;
+	color: var(--color-dark);
+	
+	&--white {
+		color: var(--color-light);
+	}
+}

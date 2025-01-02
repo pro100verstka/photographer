@@ -1,0 +1,11 @@
+@use '../helpers' as *;
+
+.descr {
+	@include fluid-text (24, 18);
+	
+	color: rgba(0, 0, 0, 0.7);
+
+	&--white {
+		color: var(--color-light-alternate);
+	}
+}

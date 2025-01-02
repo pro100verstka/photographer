@@ -1,14 +1,11 @@
 @use '../helpers' as *;
 
 .logo {
+	@include fluid-text(28, 18);
+
 	position: relative;
 	z-index: 5;
 	margin-right: rem(10);
 	font-weight: 700;
-	font-size: rem(28);
 	line-height: 1.14;
-
-	@include tablet {
-		font-size: rem(18);
-	}
 }

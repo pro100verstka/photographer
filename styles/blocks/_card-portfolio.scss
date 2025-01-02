@@ -1,0 +1,61 @@
+@use '../helpers' as *;
+
+.card-portfolio {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: flex-end;
+	row-gap: rem(10);
+	min-height: rem(380);
+	padding: rem(32);
+	text-align: center;
+	color: var(--color-light);
+	border-radius: rem(16);
+
+	@include mobile {
+		min-height: rem(320);
+		padding: rem(20);
+	}
+
+	&--1 {
+		background: url("../img/portfolio/01.jpg") 0 0 / cover no-repeat;
+	}
+	// &--2 {
+	// 	background: url("../img/portfolio/02.jpg") 0 0 / cover no-repeat;
+	// }
+	// &--3 {
+	// 	background: url("../img/portfolio/03.jpg") 0 0 / cover no-repeat;
+	// }
+	// &--4 {
+	// 	background: url("../img/portfolio/04.jpg") 0 0 / cover no-repeat;
+	// }
+	// &--5 {
+	// 	background: url("../img/portfolio/05.jpg") 0 0 / cover no-repeat;
+	// }
+	// &--6 {
+	// 	background: url("../img/portfolio/06.jpg") 0 0 / cover no-repeat;
+	// }
+
+	@for $i from 2 through 6 {
+		&--#{$i} {
+			background: url("../img/portfolio/0#{$i}.jpg") 0 0 / cover no-repeat;
+		}
+	}
+
+	&__title {
+		font-size: rem(28);
+		font-weight: 500;
+	}
+
+	
+
+	&__link {
+		color: currentColor;
+
+		&::before {
+			content: "";
+			position: absolute;
+			inset: 0;
+		}
+	}
+}
