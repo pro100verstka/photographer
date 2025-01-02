@@ -62,6 +62,12 @@
 
 		bottom: rem(45);
 		color: var(--color-light);
+
+		@include hover {
+			& > .hero__next-section-link {
+				animation-play-state: paused;
+			}
+		}
 	}
 
 	&__next-section-link {

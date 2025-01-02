@@ -627,6 +627,16 @@ button[aria-label]::before {
   bottom: 2.8125rem;
   color: var(--color-light);
 }
+@media (any-hover: hover) {
+  .hero__next-section:hover > .hero__next-section-link {
+    animation-play-state: paused;
+  }
+}
+@media (any-hover: none) {
+  .hero__next-section:active > .hero__next-section-link {
+    animation-play-state: paused;
+  }
+}
 .hero__next-section-link {
   animation: jump-link 1s infinite;
 }
