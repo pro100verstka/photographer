@@ -33,7 +33,7 @@ input,
 textarea,
 select,
 svg * {
-	transition-property: color, background-color;
+	transition-property: color, background-color, text-decoration;
   transition-duration: var(--transition-duration);
 }
 

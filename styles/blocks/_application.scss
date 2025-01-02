@@ -1,0 +1,18 @@
+@use '../helpers' as *;
+
+.application {
+	font-family: var(--font-family-accent);
+	padding-block: fluid(100, 70);
+
+	&__header {
+		max-width: rem(825);
+		margin-bottom: fluid(40, 24);
+	}
+	&__title {
+		@include fluid-text(48, 28)
+	}
+
+	&__descr {
+		font-size: inherit;
+	}
+}

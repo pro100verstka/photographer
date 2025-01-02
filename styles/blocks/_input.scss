@@ -1,0 +1,13 @@
+@use '../helpers' as *;
+
+.input {
+	min-height: var(--input-height);
+	border: var(--border);
+	border-radius: 6px;
+	padding-inline: 20px;
+
+
+	&::placeholder {
+		color: rgba(0, 0, 0, 0.2);
+	}
+}
