@@ -57,3 +57,34 @@ const swiper = new Swiper(".swiper", {
     prevEl: ".carousel__button--prev",
   },
 });
+
+let center = [55.74669833459595, 37.64925701849364];
+
+function init() {
+  let map = new ymaps.Map("map", {
+    center: center,
+    zoom: 15,
+  });
+  let placemark = new ymaps.Placemark(
+    center,
+    {},
+    {
+      iconLayout: "default#image",
+      iconImageHref: "../img/map-icon.svg",
+      iconImageSize: [24, 24],
+      iconImageOffset: [0, 0],
+    }
+  );
+
+  map.controls.remove("geolocationControl");
+  map.controls.remove("searchControl");
+  map.controls.remove("trafficControl");
+  map.controls.remove("typeSelector");
+  map.controls.remove("fullscreenControl");
+  map.controls.remove("zoomControl");
+  map.controls.remove("rulerControl");
+  map.behaviors.disable(["scrollZoom"]);
+  map.geoObjects.add(placemark);
+}
+
+ymaps.ready(init);

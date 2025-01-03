@@ -3,6 +3,30 @@
 .form {
 	text-align: center;
 
+	&--big {
+		max-width: rem(540);
+		margin-inline: auto;
+	}
+
+	&__header {
+		max-width: rem(825);
+		margin-inline: auto;
+		margin-bottom: rem(40);
+	}
+
+	&__title {
+		@include fluid-text(48, 40);
+
+		&:not(:last-child) {
+			margin-bottom: 0.333em;
+		}
+	}
+
+	&__subtitle {
+		font-weight: 600;
+		color: #333;
+	}
+
 	&__body {
 		display: inline-grid;
 		grid-template-columns: rem(260) auto;
@@ -18,6 +42,16 @@
 		@include mobile-s {
 			grid-template-columns: 1fr;
 		}
+
+		&--column {
+			display: grid;
+			grid-template-columns: 1fr;
+			row-gap: rem(12);
+		}
+
+		
+
+		
 	}
 
 	&__personal-data {
@@ -34,6 +68,76 @@
 			@include hover {
 				text-decoration: underline;
 			}
+		}
+	}
+
+	&__radio-input:checked + .form__radio-emulator::after {
+		opacity: 1;
+	}
+	&__radio-input:not(:checked) + .form__radio-emulator {
+		background-color: transparent;
+	}
+
+	&__radios {
+		display: flex;
+		flex-direction: column;
+		row-gap: rem(8);
+		margin-bottom: fluid(40, 20);
+		text-align: left;
+
+		&-label {
+			font-weight: 500;
+			margin-bottom: rem(8);
+		}
+
+		&-item {
+			display: flex;
+			align-items: center;
+			column-gap: rem(16);
+		}
+	}
+
+	&__radio-emulator {
+		display: inline-flex;
+		justify-content: center;
+		align-items: center;
+		width: rem(24);
+		aspect-ratio: 1;
+		border-radius: 50%;
+		border: var(--border);
+		background-color: var(--color-accent);
+		transition-duration: var(--transition-duration);
+
+		&::after {
+			content: "";
+			width: rem(8);
+			aspect-ratio: 1;
+			border-radius: 50%;
+			background-color: var(--color-light);
+			opacity: 0;
+		}
+	}
+
+	&__radio-label {
+		font-weight: 700;
+	}
+
+	&__button--border-radius {
+		border-radius: rem(6);
+		margin-bottom: fluid(24, 12);
+	}
+
+	&__personal-data {
+		grid-column: -1/1;
+		font-size: rem(15);
+		font-weight: 600;
+		color: rgba(0, 0, 0, 0.4);
+
+		a {
+			position: relative;
+			color: var(--color-accent);
+			text-decoration: none;
+			transition-duration: var(--transition-duration);
 		}
 	}
 }
