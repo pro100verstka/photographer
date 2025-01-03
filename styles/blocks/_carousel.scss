@@ -1,0 +1,40 @@
+@use '../helpers' as *;
+
+.carousel {
+
+	&__image {
+		display: block;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+
+	&__button {
+		position: absolute;
+		top: 50%;
+		z-index: 5;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: clamp(40px, 4.44vw, 64px);
+		aspect-ratio: 1;
+		border-radius: 50%;
+		background-color: var(--color-light);
+		color: #662e9b;
+		border: none;
+		transform: translateY(-50%);
+		transition-duration: var(--transition-duration);
+
+		@include hover {
+			background-color: #662e9b;
+			color: var(--color-light);
+		}
+
+		&--prev {
+			left: 5.55%;
+		}
+		&--next {
+			right: 5.55%;
+		}
+}
+}

@@ -4,6 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Фотограф</title>
+		<link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
     <link rel="stylesheet" href="styles/main.css" />
   </head>
   <body>
@@ -494,9 +498,157 @@
           </ul>
         </div>
       </section>
+      <section class="about" id="about">
+        <div class="about__inner container">
+          <div class="about__content">
+            <div class="about__body">
+              <div class="about__subtitle subtitle">О фотографе</div>
+              <h2 class="about__title title">
+                Более 20 лет работаю фотографом
+              </h2>
+              <div class="about__text">
+                <p>
+                  Это ваш голосовой клон AI. Мы фиксируем ваши уникальные
+                  речевые образцы, произношение и эмоциональный диапазон, чтобы
+                  создать реалистичный голос-реплику.
+                </p>
+                <p>
+                  Загрузите записи или выполните один из наших сценариев, чтобы
+                  создать свой собственный голос.
+                </p>
+              </div>
+              <button class="about__button button" type="button">
+                Записаться на съемку
+              </button>
+            </div>
+            <div class="about__images">
+              <img
+                class="about__image about__image--1"
+                src="img/about/01.jpg"
+                alt="Девушка с фотоаппаратом"
+                width="255"
+                height="255"
+                loading="lazy"
+              />
+              <img
+                class="about__image about__image--2"
+                src="img/about/02.jpg"
+                alt="Человек с фотоаппаратом на вершине горы"
+                width="350"
+                height="350"
+                loading="lazy"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+      <div class="carousel">
+        <div class="carousel-inner container-wide">
+          <!-- Оболочка слайдера -->
+          <div class="carousel__slider swiper">
+            <!-- Двигающееся часть слайдера -->
+            <div class="carousel__wrapper swiper-wrapper">
+              <!-- Слайд -->
+
+              <div class="carousel__slide swiper-slide">
+                <img
+                  class="carousel__image"
+                  src="img/carousel/01.jpg"
+                  alt="Молодожены на фоне буханки"
+                  width="1440"
+                  height="798"
+                  loading="lazy"
+                />
+              </div>
+              <div class="carousel__slide swiper-slide">
+                <img
+                  class="carousel__image"
+                  src="img/carousel/01.jpg"
+                  alt="Молодожены на фоне буханки"
+                  width="1440"
+                  height="798"
+                  loading="lazy"
+                />
+              </div>
+              <div class="carousel__slide swiper-slide">
+                <img
+                  class="carousel__image"
+                  src="img/carousel/01.jpg"
+                  alt="Молодожены на фоне буханки"
+                  width="1440"
+                  height="798"
+                  loading="lazy"
+                />
+              </div>
+              <div class="carousel__slide swiper-slide">
+                <img
+                  class="carousel__image"
+                  src="img/carousel/01.jpg"
+                  alt="Молодожены на фоне буханки"
+                  width="1440"
+                  height="798"
+                  loading="lazy"
+                />
+              </div>
+              <div class="carousel__slide swiper-slide">
+                <img
+                  class="carousel__image"
+                  src="img/carousel/01.jpg"
+                  alt="Молодожены на фоне буханки"
+                  width="1440"
+                  height="798"
+                  loading="lazy"
+                />
+              </div>
+            </div>
+            <!-- Если нужна пагинация -->
+            <div class="swiper-pagination"></div>
+            <!-- Если нужна навигация (влево/вправо) -->
+            <button
+              type="button"
+              class="carousel__button carousel__button--prev"
+            >
+              <svg
+                width="12"
+                height="22"
+                viewBox="0 0 12 22"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M2.84425 11L11.2422 1.66898L9.7556 0.331055L0.153531 11L9.7556 21.669L11.2422 20.3311L2.84425 11Z"
+                  fill="#662E9B"
+                />
+              </svg>
+            </button>
+            <button
+              type="button"
+              class="carousel__button carousel__button--next"
+            >
+              <svg
+                width="12"
+                height="22"
+                viewBox="0 0 12 22"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M9.15575 11L0.757813 1.66898L2.2444 0.331055L11.8465 11L2.2444 21.669L0.757813 20.3311L9.15575 11Z"
+                  fill="#662E9B"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
     </main>
     <footer class="footer">Footer</footer>
     <script src="./js/inputmask.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="./js/main.js"></script>
   </body>
 </html>

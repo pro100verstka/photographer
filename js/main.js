@@ -46,3 +46,14 @@ if (menuLinks.length > 0) {
 
 var im = new Inputmask("+7 (999) 999-99-99");
 im.mask(inputs);
+
+const swiper = new Swiper(".swiper", {
+  loop: true,
+  pagination: {
+    el: ".swiper-pagination",
+  },
+  navigation: {
+    nextEl: ".carousel__button--next",
+    prevEl: ".carousel__button--prev",
+  },
+});
