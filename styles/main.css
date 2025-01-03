@@ -1396,4 +1396,21 @@ a[class] {
   inset: 0;
 }
 
+.map__circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  background-color: #5552E8;
+  border-radius: 50%;
+}
+.map__circle::after {
+  content: "";
+  width: 6px;
+  height: 6px;
+  background-color: #fff;
+  border-radius: 50%;
+}
+
 /*# sourceMappingURL=main.css.map */

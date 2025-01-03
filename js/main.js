@@ -65,12 +65,15 @@ function init() {
     center: center,
     zoom: 15,
   });
+
+	const circleLayout = ymaps.templateLayoutFactory.createClass(`<div class="map__container"><div class="map__circle">`);
+
   let placemark = new ymaps.Placemark(
     center,
     {},
     {
-      iconLayout: "default#image",
-      iconImageHref: "../img/map-icon.svg",
+      iconLayout: circleLayout,
+      iconImageHref: "",
       iconImageSize: [24, 24],
       iconImageOffset: [0, 0],
     }

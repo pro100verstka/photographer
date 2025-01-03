@@ -1,0 +1,24 @@
+@use '../helpers' as *;
+
+.map {
+	&__container {
+
+	}
+
+	&__circle {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 24px;
+		height: 24px;
+		background-color: #5552E8;
+		border-radius: 50%;
+		&::after{
+			content:'';
+			width: 6px;
+			height: 6px;
+			background-color: #fff;
+			border-radius: 50%;
+		}
+	}
+}
