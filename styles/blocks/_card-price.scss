@@ -1,0 +1,68 @@
+@use "../helpers" as *;
+
+.card-price {
+  display: flex;
+  flex-direction: column;
+  padding: fluid(32, 16);
+  background-color: var(--color-light);
+  border-radius: rem(16);
+  color: var(--color-dark);
+  font-size: rem(15);
+
+  &__header {
+    padding-bottom: rem(16);
+    border-bottom: var(--border);
+    margin-bottom: rem(16);
+  }
+
+  &__option {
+    font-weight: 500;
+    color: var(--color-accent);
+
+    &:not(:last-child) {
+      margin-bottom: rem(10);
+    }
+  }
+
+  &__price {
+    font-weight: 700;
+    font-size: rem(28);
+  }
+
+  &__services {
+    font-size: rem(15);
+    font-weight: 400;
+    &:not(:last-child) {
+      margin-bottom: rem(24);
+    }
+
+    &--base
+      > .card-price__service:nth-last-child(
+        -n + 4
+      ).card-price__service::before {
+      background: url("../img/price/cross-card-price.svg") center no-repeat;
+    }
+
+    &--optimal
+      > .card-price__service:nth-last-child(
+        -n + 2
+      ).card-price__service::before {
+      background: url("../img/price/cross-card-price.svg") center no-repeat;
+    }
+  }
+
+  &__service {
+    display: flex;
+
+    &:not(:last-child) {
+      margin-bottom: rem(8);
+    }
+
+    &::before {
+      content: "";
+      flex: 0 0 rem(24);
+      background: url("../img/price/arrow-card-price.svg") center no-repeat;
+      margin-right: rem(8);
+    }
+  }
+}

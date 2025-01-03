@@ -1,0 +1,30 @@
+@use '../helpers' as *;
+
+.price {
+	padding-block: fluid(80, 70);
+	background-image: url("../img/price/price-bg.jpg");
+	background-color: rgba(102, 46, 155, 0.4);
+	background-blend-mode: overlay;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	color: var(--color-light);
+
+	&__title {
+		font-size: rem(48);
+	}
+
+	&__list {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: fluid(30, 15);
+
+		@include tablet {
+			grid-template-columns: repeat(2, 1fr);
+		}
+
+		@include mobile {
+			grid-template-columns: repeat(1, 1fr);
+		}
+	}
+}

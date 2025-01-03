@@ -5,9 +5,18 @@
 	border: var(--border);
 	border-radius: 6px;
 	padding-inline: 20px;
+	transition-duration: var(--transition-duration);
+
+	@include hover {
+		border-color: var(--color-accent);
+	}
 
 
 	&::placeholder {
 		color: rgba(0, 0, 0, 0.2);
+	}
+
+	&:user-invalid {
+		border-color: var(--color-red);
 	}
 }
