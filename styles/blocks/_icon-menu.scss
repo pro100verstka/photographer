@@ -1,6 +1,7 @@
 @use "../helpers" as *;
 
 .icon-menu {
+	position: relative;
   @include square(rem(34));
 	
 	z-index: 5;
@@ -12,6 +13,11 @@
   background-color: transparent;
   border: none;
 
+	&::before{
+		@include abs-center;
+		@include square(rem(44));
+		content:'';
+	}
   @include hover {
     color: var(--color-accent);
   }

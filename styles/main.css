@@ -447,6 +447,7 @@ a[class] {
 }
 
 .icon-menu {
+  position: relative;
   width: 2.125rem;
   height: 2.125rem;
   z-index: 5;
@@ -457,6 +458,15 @@ a[class] {
   color: var(--color-dark);
   background-color: transparent;
   border: none;
+}
+.icon-menu::before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  width: 2.75rem;
+  height: 2.75rem;
+  content: "";
 }
 @media (any-hover: hover) {
   .icon-menu:hover {
@@ -624,7 +634,17 @@ a[class] {
   }
 }
 .hero__next-section-link {
+  position: relative;
   animation: jump-link 1s infinite;
+}
+.hero__next-section-link::before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  width: 2.75rem;
+  height: 2.75rem;
+  content: "";
 }
 @keyframes jump-link {
   0% {

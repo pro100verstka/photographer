@@ -71,6 +71,15 @@
 	}
 
 	&__next-section-link {
+		position: relative;
+		&::before{
+			@include abs-center;
+			@include square(rem(44));
+			content:'';
+			
+		}
+		
+
 		animation: jump-link 1s infinite;
 	}
 
