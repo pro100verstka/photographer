@@ -1,0 +1,286 @@
+@font-face {
+  font-family: 'Stem';
+  src: url('../fonts/Stem-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Stem';
+  src: url('../fonts/Stem-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Stem';
+  src: url('../fonts/Stem-Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+*, *:before, *:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+
+.container {
+  max-width: 1130px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.title {
+  font-size: 64px;
+  font-weight: 700;
+  line-height: 1.06;
+}
+
+.description {
+  color: rgba(0, 0, 0, 0.7);
+}
+
+.button {
+  display: inline-block;
+  align-items: center;
+  justify-content: center;
+  background-color: #f86624;
+  padding: 16px;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.section__header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  text-align: center;
+}
+
+
+body {
+  font-family: 'Stem', sans-serif;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 1.3;
+}
+
+.header {
+  background-color: #fff;
+}
+
+.header__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 80px;
+}
+
+
+.logo {
+  font-size: 28px;
+  line-height: 1.14;
+  color: #000;
+}
+
+.header__menu {
+}
+
+.menu {
+}
+
+.menu_list {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.menu__item {
+}
+
+.menu__link {
+  position: relative;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.3;
+  color: rgba(0, 0, 0, 0.7);
+}
+
+.menu__link:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  height: 2px;
+  width: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  transition: 0.2s;
+}
+
+.menu__link:hover.menu__link:before {
+  width: 100%;
+}
+
+.hero {
+  padding: 224px 0;
+  background-image: url("../img/hero-bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: rgba(102, 46, 155, 0.4);
+  background-blend-mode: overlay;
+  color: #fff;
+}
+
+.hero__wrapper {
+}
+
+.container {
+}
+
+.hero__content {
+  max-width: 480px;
+}
+
+.hero__title {
+  margin-bottom: 24px;
+}
+
+.hero__description {
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 40px;
+}
+
+.hero__actions {
+  display: flex;
+  gap: 16px;
+}
+
+.hero__button {
+  font-size: 18px;
+  font-weight: 500;
+  color: inherit;
+  max-width: 178px;
+  width: 100%;
+}
+
+.hero__button:hover {
+  background-color: #fff;
+  color: #f86624;
+}
+
+.portfolio {
+  padding: 100px 0;
+}
+
+.portfolio__wrapper {
+}
+
+.portfolio__header {
+  margin-bottom: 60px;
+}
+
+
+.portfolio__title {
+}
+
+.portfolio__description {
+  max-width: 720px;
+}
+
+.portfolio__list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  transition: 0.2s;
+}
+
+.portfolio__list:hover .portfolio__item{
+  filter: grayscale(90%);
+  opacity: 0.5;
+}
+
+.portfolio__item {
+  transition: 0.2s;
+
+}
+
+.portfolio__list .portfolio__item:hover {
+  filter: grayscale(0);
+  opacity: 1;
+
+}
+
+.portfolio__card {
+  position: relative;
+}
+
+
+.card-portfolio {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 10px;
+  min-height: 380px;
+  padding: 32px;
+  text-align: center;
+  color: #fff;
+  border-radius: 16px;
+}
+.card-portfolio--01 {
+  background-image: url("../img/portfolio/01.jpg");
+}
+.card-portfolio--02 {
+  background-image: url("../img/portfolio/02.jpg");
+}
+.card-portfolio--03 {
+  background-image: url("../img/portfolio/03.jpg");
+}
+.card-portfolio--04 {
+  background-image: url("../img/portfolio/04.jpg");
+}
+.card-portfolio--05 {
+  background-image: url("../img/portfolio/05.jpg");
+}
+.card-portfolio--06 {
+  background-image: url("../img/portfolio/06.jpg");
+}
+
+.card-portfolio__title {
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 1.3;
+}
+
+.card-portfolio__price {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.3;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.card-portfolio__link {
+}
+
+.card-portfolio__link:before {
+  content: '';
+  position: absolute;
+  inset: 0;
+}
+
